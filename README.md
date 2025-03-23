@@ -79,7 +79,9 @@ Thêm port ether2 vào Bridge 1
 ![image](https://github.com/user-attachments/assets/db43b3e9-05c3-4f8d-992d-187f9fc77b89)
 
 Tạo NAT Frewal-New--Grneral --Out Interface--ether1
-
+```bash
+/ip firewall nat add chain=srcnat action=masquerade out-interface=ether1
+```
 ![image](https://github.com/user-attachments/assets/7443a42a-20d4-4cf6-8540-f2461cff7610)
 
 Action -- masquerade-
