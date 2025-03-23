@@ -66,6 +66,17 @@ Bước 2 setup MIROTIK chuyển đầu mạng đang kết nối thành ether1
 
 ![image](https://github.com/user-attachments/assets/532f01ce-8e46-4278-a858-40b276316ccc)
 
+Full
+```bash
+/interface bridge add name=bridge1
+/interface bridge port add bridge=bridge1 interface=ether2
+/ip firewall nat add chain=srcnat action=masquerade out-interface=ether1
+/ip address add address=10.10.10.1/23 interface=bridge1 network=10.10.10.0
+/ip/dns set servers=8.8.8.8,8.8.4.4
+
+```
+
+
 Tạo Bridge1
 ```bash
 /interface bridge add name=bridge1
