@@ -25,8 +25,9 @@ keygen
 /ip firewall nat add chain=srcnat action=masquerade out-interface=ether1
 /ip address add address=10.10.10.1/23 interface=bridge1 network=10.10.10.0
 /ip/dns set servers=8.8.8.8,8.8.4.4
-
 ```
+DHCP Clien xóa ether2
+
 Sữa Card mạng VPN RA
 
 ![image](https://github.com/user-attachments/assets/4039c440-c37c-4ef3-9595-1e9c2378fde3)
