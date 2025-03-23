@@ -90,6 +90,10 @@ SETUP DNS
 
 ![image](https://github.com/user-attachments/assets/6f3e2591-5cc0-4697-953b-6a6b4f386aed)
 
+DHCP Setup bridge1
+
+![image](https://github.com/user-attachments/assets/66dc88db-8721-46c1-8803-87d4c7789c42)
+
 SETUP vEthernet (VPN) --192.168.137.1--
 ```bash
 192.168.137.1
