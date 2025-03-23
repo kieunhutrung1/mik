@@ -6,7 +6,27 @@ Hyper-V trên Windows 10
 ```bash
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All
 ```
+Full
+```bash
+system telnet 127.0.0.1
+```
 
+Login ; devel
+
+pass không có
+
+```bash
+keygen
+```
+```bash
+/interface bridge add name=bridge1
+/interface bridge port add bridge=bridge1 interface=ether2
+/ip dhcp-client add interface=ether1 disabled=no
+/ip firewall nat add chain=srcnat action=masquerade out-interface=ether1
+/ip address add address=10.10.10.1/23 interface=bridge1 network=10.10.10.0
+/ip/dns set servers=8.8.8.8,8.8.4.4
+
+```
 Sữa Card mạng VPN RA
 
 ![image](https://github.com/user-attachments/assets/4039c440-c37c-4ef3-9595-1e9c2378fde3)
@@ -65,17 +85,6 @@ keygen
 Bước 2 setup MIROTIK chuyển đầu mạng đang kết nối thành ether1 
 
 ![image](https://github.com/user-attachments/assets/532f01ce-8e46-4278-a858-40b276316ccc)
-
-Full
-```bash
-/interface bridge add name=bridge1
-/interface bridge port add bridge=bridge1 interface=ether2
-/ip firewall nat add chain=srcnat action=masquerade out-interface=ether1
-/ip address add address=10.10.10.1/23 interface=bridge1 network=10.10.10.0
-/ip/dns set servers=8.8.8.8,8.8.4.4
-
-```
-
 
 Tạo Bridge1
 ```bash
