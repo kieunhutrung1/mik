@@ -66,12 +66,16 @@ Bước 2 setup MIROTIK chuyển đầu mạng đang kết nối thành ether1
 
 ![image](https://github.com/user-attachments/assets/532f01ce-8e46-4278-a858-40b276316ccc)
 
-Tạo Bridge 1
-
+Tạo Bridge1
+```bash
+/interface bridge add name=bridge1
+```
 ![image](https://github.com/user-attachments/assets/21917e7c-f93e-4920-8a3c-f04e1ae3b9c7)
 
-Thêm port ether1 vào Bridge 1
-
+Thêm port ether2 vào Bridge 1
+```bash
+/interface bridge port add bridge=bridge1 interface=ether2
+```
 ![image](https://github.com/user-attachments/assets/db43b3e9-05c3-4f8d-992d-187f9fc77b89)
 
 Tạo NAT Frewal-New--Grneral --Out Interface--ether1
@@ -83,11 +87,15 @@ Action -- masquerade-
 ![image](https://github.com/user-attachments/assets/585fdefe-c8e2-43ec-8850-427645eeac6b)
 
 IP-Address--10.10.10/23---Bridge1
-
+```bash
+/ip address add address=10.10.10.1/23 interface=bridge1 network=10.10.10.0
+```
 ![image](https://github.com/user-attachments/assets/429b94d1-2c37-480c-9dd1-538267e11eeb)
 
 SETUP DNS
-
+```bash
+/ip/dns set servers=8.8.8.8,8.8.4.4
+```
 ![image](https://github.com/user-attachments/assets/6f3e2591-5cc0-4697-953b-6a6b4f386aed)
 
 DHCP Setup bridge1
