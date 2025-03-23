@@ -125,11 +125,7 @@ DHCP Setup bridge1
 
 ![image](https://github.com/user-attachments/assets/66dc88db-8721-46c1-8803-87d4c7789c42)
 
-SETUP vEthernet (VPN) --192.168.137.1--
-```bash
-192.168.137.1
-```
-![image](https://github.com/user-attachments/assets/19cbb4e9-cffd-4ca2-a4b8-30f1897ebdd6)
+
 
 
 
