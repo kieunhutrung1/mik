@@ -87,7 +87,9 @@ SETUP DNS
 ![image](https://github.com/user-attachments/assets/6f3e2591-5cc0-4697-953b-6a6b4f386aed)
 
 SETUP vEthernet (VPN) --192.168.137.1--
-
+```bash
+192.168.137.1
+```
 ![image](https://github.com/user-attachments/assets/19cbb4e9-cffd-4ca2-a4b8-30f1897ebdd6)
 
 
